@@ -10,33 +10,34 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  
+  <div class="control-group">
+    <div class="col-md-3">
+      <%= form.text_field :first_name, class:"form-control", placeholder:"First Name" %>
+    </div>
+  <br>
+    <div class="col-md-3">
+      <%= form.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
+    </div>
+  <br>
+    <div class="col-md-3">
+      <%= form.text_field :email, class:"form-control", placeholder:"Email"%>
+    </div>
+  <br>
+    <div class="col-md-3">
+      <%= form.text_field :phone, class:"form-control", placeholder:"Phone" %>
+    </div>
+  <br>
+    <div class="col-md-3">
+      <%= form.text_field :instagram, class:"form-control", placeholder:"Instagram"%>
+    </div>
+  <br>
+    <%= form.number_field :user_id, id: :friendb_user_id, class:"form-control", value: current_user.id, type: :hidden %>
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :instagram %>
-    <%= form.text_field :instagram %>
-  </div>
-
+<br/>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:'btn btn-dark' %>
   </div>
 <% end %>

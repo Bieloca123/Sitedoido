@@ -1,6 +1,6 @@
 class FriendsdbsController < ApplicationController
   before_action :set_friendsdb, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [ :index, :show ]
   # GET /friendsdbs or /friendsdbs.json
   def index
     @friendsdbs = Friendsdb.all
@@ -64,6 +64,6 @@ class FriendsdbsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def friendsdb_params
-      params.require(:friendsdb).permit(:first_name, :last_name, :email, :phone, :instagram)
+      params.require(:friendsdb).permit(:first_name, :last_name, :email, :phone, :instagram, :user_id)
     end
 end

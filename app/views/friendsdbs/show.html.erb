@@ -1,18 +1,15 @@
-<p id="notice"><%= notice %></p>
-
 <div class="p-5 mb-4 bg-secondary rounded-3">
 <div class="container-fluid py-5">
+<b/>
     <h1 class="display-6 fw-bold"><%= @friendsdb.first_name %>, <%= @friendsdb.last_name %> </h1>
     <p class="col-md-8 fs-4">
     </p>
      </p>
-     <%= @friendsdb.email %> |
-     = @friendsdb.phone %>|
+    | <%= @friendsdb.email %> |
+    <%= @friendsdb.phone %>|
      <%= @friendsdb.instagram %>|
-         </p>
-    
-<%= link_to 'Edit', edit_friendsdb_path(@friendsdb), class:"btn btn-secondary btn-dark" %> |
+     <b/>
+</p> <%= link_to 'Edit', edit_friendsdb_path(@friendsdb), class:"btn btn-secondary btn-dark" %> |
 <%= link_to 'Back', friendsdbs_path, class:"btn btn-secondary btn-dark" %>
-
-</div>
+<b/>
 </div>

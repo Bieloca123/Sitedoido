@@ -1,6 +1,7 @@
 <h1>Editing Friends</h1>
-
+<br>
 <%= render 'form', friendsdb: @friendsdb %>
+<br>
+<%= link_to 'Show', @friendsdb, class: "btn btn-dark" %>
 
-<%= link_to 'Show', @friendsdb %> |
-<%= link_to 'Back', friendsdbs_path %>
+<%= link_to 'Back', friendsdbs_path, class: "btn btn-dark" %>
